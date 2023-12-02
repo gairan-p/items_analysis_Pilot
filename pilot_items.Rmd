@@ -1,0 +1,33 @@
+---
+title: "Pilot measures items"
+author: "Gairan"
+date: "2023-12-02"
+output: html_document
+---
+
+
+```{r}
+getwd()
+library(readxl)
+me<- read_xlsx("C:/Users/psyuser/Documents/Reading_Pilot_Scores/MM_data/MM_1_Elision(CTOPP).xlsx")
+
+colnames(me)
+some_packages <- c('ggplot2', 'dplyr', 'ggthemes', 
+                   'tidyverse', 'mirt', 'ggmirt', 'ltm', 'psych', 
+                   'readr', 'qgraph', 'bootnet', 'OpenMx', 'EGAnet', 
+                   'lavaan', 'summarytools', 'sem', 'psychotools', 'GPArotation',  
+                   'MBESS', 'ltm', 'coefficientalpha', 'writexl', 'epmr', 
+                   'deltaPlotR', 'corrplot', 'ggdendro', 'difNLR', 
+                   'ShinyItemAnalysis', 'difR', 'patchwork')
+
+lapply(some_packages, library, character.only=TRUE)
+
+item_me<-   ItemAnalysis(me)
+
+write.table(item_me, "MM elision items traditional.csv", quote= F)
+
+item_me <- read.csv("MM elision items traditional.csv", 
+                    sep= "", header= TRUE)
+
+```
+
