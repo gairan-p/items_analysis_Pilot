@@ -1,3 +1,3 @@
-# items_analysis_Pilot
-This is the item analysis of the measures in the pilot study.
-The measures are in English and MM, seven each.
+# items_analysis
+This study is the psychometric analysis of the newly constructed measures.
+The measures are adapted from English to MM. 
